@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Container, Row, Col } from "reactstrap";
+import SearchBar from "./components/SearchBar";
+import Header from "./components/Header";
+import Table from "./components/Table";
+import { MyContainer } from "./styles"
 
-function App() {
+const App = () => {
+  // const [ data, setData ] = useState({
+  //   search: ""
+  // })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyContainer>
+      <Row>
+        <Col>
+          <Header>
+            BleepBloop
+          </Header>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm="12" md={{ size: 6, offset: 3}} >
+          <SearchBar>
+            
+          </SearchBar>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Table></Table>
+        </Col>
+      </Row>
+    </MyContainer>
   );
 }
 
