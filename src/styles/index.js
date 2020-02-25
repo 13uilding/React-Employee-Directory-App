@@ -7,16 +7,18 @@ export const FormWrapper = styled(Form)`
     #searchEmployeeInput {
         width: 350px;
         margin-right: 5px;
+        margin-bottom: 20px;
     }
 `
 
 export const MyContainer = styled(Container)`
     text-align: center;
+    
 `
 
-export const MyHeader = styled(Jumbotron)`
+export const MyJumbotron = styled(Jumbotron)`
     text-align: center;
     color: ${white};
-    padding: 20px 100%;
+    padding: 20px 0;
     margin: 20px 0px;
 `
