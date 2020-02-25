@@ -3,6 +3,7 @@ import { Button, FormGroup, Input } from 'reactstrap';
 import { FormWrapper } from "../styles"
 
 const Search = (props) => {
+  console.log(`SearchBar Props: ${props}`);
   return (
     <FormWrapper inline>
       <FormGroup>
