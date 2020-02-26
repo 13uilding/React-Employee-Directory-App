@@ -13,7 +13,9 @@ export const FormWrapper = styled(Form)`
 `
 
 export const MyContainer = styled(Container)`
-    text-align: center;
+    * {
+        text-align: center;
+    }
     .jumbotron {
         margin-top: 0;
         padding-top: 20px;

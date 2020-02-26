@@ -3,7 +3,7 @@ import React from "react";
 
 const Row = props => {
   return (
-    <tr key={props.key}>
+    <tr>
       <th scope="row" name="index">{props.index}</th>
       <td name="image">
         <img src={props.image} alt="employee" />
