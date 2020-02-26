@@ -1,5 +1,7 @@
 import React from 'react';
 import { Table } from 'reactstrap';
+import employees from "../dummyEmployeeData.json";
+import Row from "./table/Row";
 
 // const image = [0].picture.thumbnail
 // const firstName = [0].name.first
@@ -9,7 +11,7 @@ import { Table } from 'reactstrap';
 // const login = [0].username
 // const dob = [0].dob
 
-const Table = (props) => {
+const MyTable = (props) => {
   return (
     <Table dark striped>
       <thead>
@@ -24,48 +26,34 @@ const Table = (props) => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td name="image"><img src="file"/></td>
-          <td name="name">Mark Otto</td>
-          <td name="cell">901-444-5682</td>
-          <td name="email">quan@mdo.com</td>
-          <td name="dob">03031992</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        {employees.map(employee => {
+          let index = employees.indexOf(employee);
+          let image = employee.picture.thumbnail;
+          let name = employee.firstName + employee.lastName;
+          let { cell, email, dob } = employee;
+          <Row 
+            index={index}
+            image={} 
+            name={}
+            cell={}
+            email={}
+            dob={} 
+          >
+
+          </Row>
+        })}
       </tbody>
     </Table>
   );
 }
 
-export default Table;
+export default MyTable;
 
-
-// Table.propTypes = {
-//     // Pass in a Component to override default element
-//     tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-//     size: PropTypes.string,
-//     bordered: PropTypes.bool,
-//     borderless: PropTypes.bool,
-//     striped: PropTypes.bool,
-//     dark: PropTypes.bool,
-//     hover: PropTypes.bool,
-//     responsive: PropTypes.bool,
-//     // Custom ref handler that will be assigned to the "ref" of the inner <table> element
-//     innerRef: PropTypes.oneOfType([
-//       PropTypes.func,
-//       PropTypes.string,
-//       PropTypes.object
-//     ])
-//     };
+/*
+index
+image
+name
+cell
+email
+dob
+*/
