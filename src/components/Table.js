@@ -12,12 +12,10 @@ import Row from "./table/Row";
 // const dob = [0].dob
 
 const MyTable = (props) => {
-  console.log(employees[0].name.first + " " + employees[0].name.last)
   return (
     <Table dark striped>
       <thead>
         <tr>
-          <th>#</th>
           <th></th>
           <th>Image</th>
           <th>Name</th>

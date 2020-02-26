@@ -10,9 +10,10 @@ const App = () => {
     searchEmployee: ""
   })
 
-  const handleSearchField = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log(e.target);
+    console.log(e.target.value);
   }
 
   return (
@@ -24,7 +25,7 @@ const App = () => {
       </Row>
       <Row>
         <Col sm="12" md={{ size: 6, offset: 3}} >
-          <SearchBar searchEmployee>
+          <SearchBar handleSubmit={handleSubmit}>
             
           </SearchBar>
         </Col>
