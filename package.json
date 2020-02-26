@@ -1,6 +1,6 @@
 {
   "name": "react-employee-directory-app",
-  "homepage": "http://13uilding.github.io/React-Employee-Directory-App",
+  "homepage": "https://13uilding.github.io/React-Employee-Directory-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "React-Employee-Directory-app -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
