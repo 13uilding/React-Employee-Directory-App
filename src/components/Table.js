@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table } from 'reactstrap';
-import employees from "../dummyEmployeeData.json";
+import { results as employees } from "../dummyEmployeeData.json";
 import Row from "./table/Row";
 
 // const image = [0].picture.thumbnail
@@ -12,6 +12,7 @@ import Row from "./table/Row";
 // const dob = [0].dob
 
 const MyTable = (props) => {
+  console.log(employees[0].name.first + " " + employees[0].name.last)
   return (
     <Table dark striped>
       <thead>
@@ -26,22 +27,16 @@ const MyTable = (props) => {
         </tr>
       </thead>
       <tbody>
-        {employees.map(employee => {
-          let index = employees.indexOf(employee);
-          let image = employee.picture.thumbnail;
-          let name = employee.firstName + employee.lastName;
-          let { cell, email, dob } = employee;
-          <Row 
-            index={index}
-            image={} 
-            name={}
-            cell={}
-            email={}
-            dob={} 
-          >
-
-          </Row>
-        })}
+        {employees.map(employee => (
+            <Row 
+              key={employee.login.uuid}
+              image={employee.picture.thumbnail} 
+              name={employee.name.first + " " + employee.name.last}
+              cell={employee.cell}
+              email={employee.email}
+              dob={employee.dob.date.slice(0,10)} 
+            ></Row>
+        ))}
       </tbody>
     </Table>
   );
